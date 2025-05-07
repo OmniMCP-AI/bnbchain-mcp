@@ -4,18 +4,18 @@ startCommand:
   type: stdio
   configSchema:
     type: object
-    required: ["PRIVATE_KEY"]
+    required: ["privateKey"]
     properties:
-      PRIVATE_KEY:
+      privateKey:
         type: string
         title: "Wallet Private Key"
         description: "Private key used for signing transactions on the BNB Chain."
-      LOG_LEVEL:
+      logLevel:
         type: string
         title: "Log Level"
         description: "Set logging level (DEBUG, INFO, WARN, ERROR)"
         default: "INFO"
-      PORT:
+      port:
         type: integer
         title: "Server Port"
         description: "Port number for the local server (default: 3001)"

@@ -27,5 +27,5 @@ RUN echo "PRIVATE_KEY=$PRIVATE_KEY\nLOG_LEVEL=$LOG_LEVEL\nPORT=$PORT" > .env
 # 暴露服务端口
 EXPOSE $PORT
 
-# 启动开发服务器
-CMD ["bun", "dev:sse"]
+# 启动服务器（使用 stdio 模式）
+CMD ["bun", "dev"]
