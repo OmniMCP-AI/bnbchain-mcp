@@ -10,24 +10,12 @@ startCommand:
         type: string
         title: "Wallet Private Key"
         description: "Private key used for signing transactions on the BNB Chain."
-      logLevel:
-        type: string
-        title: "Log Level"
-        description: "Set logging level (DEBUG, INFO, WARN, ERROR)"
-        default: "INFO"
-      port:
-        type: integer
-        title: "Server Port"
-        description: "Port number for the local server (default: 3001)"
-        default: 3001
   commandFunction: |-
     (config) => ({
       command: "bun",
       args: ["dev:sse"],
       env: {
         PRIVATE_KEY: config.PRIVATE_KEY,
-        LOG_LEVEL: config.LOG_LEVEL,
-        PORT: config.PORT
       }
     })
 
